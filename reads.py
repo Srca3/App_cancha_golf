@@ -1,5 +1,5 @@
 import data
-
+#Este es un texto de prueba
 bd = data.datos
 
 def search(dni):
@@ -10,12 +10,6 @@ def search(dni):
         else:
             return False
         
-
-def caca(dni):
-    x=input("ingrese algo")
-    print(x)
-    return  x
-    
 
 
 
