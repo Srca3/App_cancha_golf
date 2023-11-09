@@ -1,6 +1,5 @@
 import data
-#Este es un texto de prueba
-#Texto 2 en mp3
+#Nueva chamba
 bd = data.datos
 
 def search(dni):
