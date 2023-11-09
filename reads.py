@@ -11,7 +11,10 @@ def search(dni):
             return False
         
 
-
+def caca(dni):
+    x=input("ingrese algo")
+    print(x)
+    return  x
     
 
 
