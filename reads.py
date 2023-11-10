@@ -19,6 +19,7 @@ def val_dnitype(dni):
     #Es 1 si está en la base de datos
     if len(str(dni)) == 8:
         search(dni)
+        return True
     else: 
         raise Exception("DNI inválido")
         return False
@@ -44,13 +45,22 @@ def dni_reads(dni):
     if val_access == True:
         gate = reserved_gate(dni) #Puerta o cancha
         access = have_permission(dni) # Tiene acceso o no
-        return[gate, access]
+        return[access, gate]
     else:
         print("Usted no tiene acceso")
         return[0,0]
     
 def reservation_now():
-    print("reserva ahora")
+    ava_g = available_gate()
+    #Si no hay puerta disponible
+    if ava_g == 0:
+        print("No hay puerta disponible")
+        return 0
+    else:
+        return [ava_g,1]
+    
+def available_gate():
+    return None
 
 
 

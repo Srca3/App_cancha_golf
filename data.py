@@ -15,5 +15,17 @@ datos = [{
     'USUARIO':'Fabrizio Piedra', 
     'Reserva': 1, 'Puerta' : 2
 },
+]
 
+
+times =[
+    { 'day':'10/11/2023', 
+     'times':[{'time':'8:00pm','gates':[{'gate':1,'reserva':'0'},{'gate':2,'reserva':'0'}]},
+              {'time':'9:00pm','gates':[{'gate':1,'reserva':'0'},{'gate':2,'reserva':'0'}]}]   
+    },
+
+    { 'day':'11/11/2023', 
+     'times':[{'time':'8:00pm','gates':[{'gate':1,'reserva':'1'},{'gate':2,'reserva':'0'}]},
+              {'time':'9:00pm','gates':[{'gate':1,'reserva':'0'},{'gate':2,'reserva':'0'}]}]    
+    },
 ]
