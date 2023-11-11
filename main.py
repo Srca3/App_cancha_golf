@@ -6,4 +6,5 @@ def main():
     assets.save()
     assets.send_to_arduino(results[1])
 if __name__ =='__main__':
-    main()
+    while True:
+        main()

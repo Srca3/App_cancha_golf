@@ -61,7 +61,7 @@ def reservation_now():
     if ava_g == 0:
         return [0,0]
     else:
-        return [ava_g,1]
+        return [1,ava_g]
     
 def day_():
     x= dt.date.today()
@@ -76,7 +76,7 @@ def time_():
     else:
         str_hour =f'{hour_.hour}:00m'
     return str_hour
-
+#Valida si hay puerta disponible 0 si no hay y el valor de la puerta si sí hay
 def val_gate(day,time):
     for entry in times:
         if entry['day'] == day:
@@ -84,9 +84,10 @@ def val_gate(day,time):
                 if time_entry['time'] == time:
                     for gate_entry in time_entry['gates']:
                         if gate_entry['reserva'] == '0':
-                            return gate_entry
+                            return gate_entry['gate']
                         elif gate_entry['reserva']=='1':
-                            return 0
+                            continue
+    return 0
          
 def available_gate():
     _day = day_()

@@ -13,9 +13,13 @@ Asegúrate de tener instalado Python en tu sistema para ejecutar este código.
     ```bash
     git clone https://github.com/Srca3/App_cancha_golf
     ```
-2. Abre la terminal en la ubicación del archivo `main.py`.
-3. Ejecuta el script usando `python main.py`.
-4. Sigue las instrucciones proporcionadas para ingresar tu DNI y realizar reservas.
+2. Asegurate de tener instalados los paquetes necesarios
+    ```bash
+    pip install datetime serial time pyserial
+    ```
+3. Abre la terminal en la ubicación del archivo `main.py`.
+4. Ejecuta el script usando `python main.py`.
+5. Sigue las instrucciones proporcionadas para ingresar tu DNI y realizar reservas.
 
 ## Funciones Principales
 

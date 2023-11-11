@@ -1,5 +1,6 @@
 import reads
-
+import serial
+import time
 in_gate = 0 # Inicialmente la puerta esta cerrada
 
 def access():
@@ -32,6 +33,24 @@ def access():
 def save():
     print("Guardando...")
     return None
-def send_to_arduino(resultado):
-    print(resultado)
-    return None
+
+
+def send_to_arduino(puerta):
+    try:
+        # Configura la conexión serial con el Arduino
+        ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)  # Ajusta el puerto serial según sea necesario
+        time.sleep(2)  # Espera 2 segundos para establecer la conexión
+
+        # Envía el valor de la puerta al Arduino
+        ser.write(f"{puerta}\n".encode('utf-8'))
+
+        # Espera la confirmación del Arduino (opcional)
+        response = ser.readline().decode('utf-8').strip()
+        print(f"Arduino dice: {response}")
+
+        # Cierra la conexión serial
+        ser.close()
+
+    except Exception as e:
+        print(f"Error al enviar datos al Arduino: {e}")
+
