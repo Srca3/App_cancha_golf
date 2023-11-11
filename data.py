@@ -1,7 +1,6 @@
 #Gate 0 es no reserva
 
 datos = [
-    
 {   'DNI': '70398195', 
     'USUARIO':'Sofia Bobadilla', 
     'Reserva': 1,
@@ -18,7 +17,6 @@ datos = [
     'Puerta' : 2,
 }
 ]
-
 
 times = [
     {'day': '10/11/2023',

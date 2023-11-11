@@ -29,7 +29,6 @@ def access():
         print("Bienvenido {}. Tu cancha reservada es la {}.".format(usuario,gate))
         return [access_val,gate] #La puerta tiene que abrirse o cerrarse
 
-
 def save():
     print("Guardando...")
     return None

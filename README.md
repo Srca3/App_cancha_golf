@@ -50,7 +50,13 @@ Verifica la disponibilidad de puertas en función de la fecha y hora actuales.
 
 Si encuentras algún problema o deseas contribuir, ¡sientete libre de abrir un issue o enviar un pull request!
 
-## Autor
+## Autores
 
 Santiago Cruz 
+Carlos Oliva
+Diego Vasquez
+Luis Ibañez
+Lucas Doig
+Fabrizio Piedra
+Zebastian Morocho
 

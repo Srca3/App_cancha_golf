@@ -4,8 +4,6 @@ import datetime as dt
 bd = data.datos
 times = data.times
 
-
-
 def user(dni):
     for dato in bd:
         if dato['DNI'] == dni:
@@ -30,7 +28,6 @@ def val_dnitype(dni):
     else: 
         print("DNI inválido")
         return False
-
 
 #Esta función busca el valor de puerta 1 2 o 3, 0 si es que no tiene puerta
 def reserved_gate(dni):
@@ -66,7 +63,6 @@ def reservation_now():
     else:
         return [ava_g,1]
     
-
 def day_():
     x= dt.date.today()
     x_str = f'{x.day}/{x.month}/{x.year}'
@@ -81,9 +77,6 @@ def time_():
         str_hour =f'{hour_.hour}:00m'
     return str_hour
 
- 
-
-
 def val_gate(day,time):
     for entry in times:
         if entry['day'] == day:
@@ -94,11 +87,7 @@ def val_gate(day,time):
                             return gate_entry
                         elif gate_entry['reserva']=='1':
                             return 0
-      
-
-
-
-    
+         
 def available_gate():
     _day = day_()
     _time = time_()
