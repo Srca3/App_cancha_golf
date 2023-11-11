@@ -1,46 +1,46 @@
 import data
 import datetime as dt
 
-#Nueva chamba
-#Este es una prueba
 bd = data.datos
 times = data.times
 
+
+#Esta función busca el DNI en la base de datos y regresa True si lo encuentra y False si no
 def search(dni):
     for dato in bd:
         if dato['DNI'] == dni:
-            print("Encontrado")
             return True
-        else:
-            return False
+    return False
         
-
-
-
+#Esta función verifica si el DNI es valido y regresa True si lo encuentra o False si el DNI es invalido o no esta en la base de datos
 def val_dnitype(dni):
-    #Es 0 si no está en la base de datos
-    #Es 1 si está en la base de datos
     if len(str(dni)) == 8:
-        return search(dni)
+        if search(dni)==True:
+            print("DNI encontrado")
+            return search
+        else:
+            print("DNI no encontrado")
+            return search
     else: 
-        raise Exception("DNI inválido")
+        print("DNI inválido")
         return False
-    
 
+
+#Esta función busca el valor de puerta 1 2 o 3, 0 si es que no tiene puerta
 def reserved_gate(dni):
     for dato in bd:
         if dato['DNI'] == dni:
             gate = (dato['Puerta'])
     return gate
 
-
+#Esta función busca el valor de reserva 1 si sí tiene, 0 si no tiene
 def have_permission(dni):
     for dato in bd:
         if dato['DNI'] == dni:
             access = (dato['Reserva'])
     return access
 
-
+#Esta función regresa el valor de acceso y la puerta o si no tiene acceso
 def dni_reads(dni):
     print("Leyendo DNI")
     val_access = val_dnitype(dni) # Puede ser 0 o 1 
