@@ -9,11 +9,11 @@ Asegúrate de tener instalado Python en tu sistema para ejecutar este código.
 
 ## Uso
 
-1. Clona el repositorio o descarga el archivo `main.py`.
-    
+1. Clona el repositorio en la carpeta que desees.
+    ```bash
     git clone https://github.com/Srca3/App_cancha_golf
-    
-2. Abre una terminal en la ubicación del archivo `main.py`.
+    ```
+2. Abre la terminal en la ubicación del archivo `main.py`.
 3. Ejecuta el script usando `python main.py`.
 4. Sigue las instrucciones proporcionadas para ingresar tu DNI y realizar reservas.
 
@@ -42,6 +42,7 @@ Verifica la disponibilidad de puertas en función de la fecha y hora actuales.
 ## Estructura del Proyecto
 
 - `main.py`: Contiene el código principal.
+- `assets.py`: Contiene la funcíon principal access() y funciones adicionales como save() y send().
 - `data.py`: Contiene datos de ejemplo y funciones relacionadas con la base de datos.
 - `reads.py`: Contiene funciones relacionadas con la lectura y verificación del DNI.
 
