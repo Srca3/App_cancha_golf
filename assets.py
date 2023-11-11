@@ -13,12 +13,12 @@ def access():
         _action = input("Ingresa s o n para definir si quieres reservar ahora: ")
         if _action =='s':
             access_val = reads.reservation_now()[0]
-            gate = reads.reservation_now()[1]
-            print(f"La puerta {gate} está disponible.")
+            gate = reads.reservation_now()[1]        
             if gate ==0:
                 print("No hay cancha disponible")
                 print("No se abrira ninguna puerta")
                 return[access_val,gate]
+            print(f"La puerta {gate} está disponible.")
             return[access_val,gate]
         else:
             access()
@@ -31,6 +31,8 @@ def access():
 
 
 def save():
+    print("Guardando...")
     return None
 def send_to_arduino(resultado):
+    print(resultado)
     return None

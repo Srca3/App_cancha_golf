@@ -44,7 +44,7 @@ times = [
      'times': [
          {'time': '8:00am', 'gates': [{'gate': 1, 'reserva': '1'}, {'gate': 2, 'reserva': '0'}]},
          {'time': '9:00am', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
-         {'time': '10:00am', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
+         {'time': '10:00am', 'gates': [{'gate': 1, 'reserva': '1'}, {'gate': 2, 'reserva': '1'}]},
          {'time': '11:00am', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
          {'time': '12:00m', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
          {'time': '1:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},

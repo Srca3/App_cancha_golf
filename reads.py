@@ -93,7 +93,7 @@ def val_gate(day,time):
                         if gate_entry['reserva'] == '0':
                             return gate_entry
                         elif gate_entry['reserva']=='1':
-                            return gate_entry
+                            return 0
       
 
 
