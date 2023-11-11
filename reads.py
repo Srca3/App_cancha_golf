@@ -5,6 +5,12 @@ bd = data.datos
 times = data.times
 
 
+
+def user(dni):
+    for dato in bd:
+        if dato['DNI'] == dni:
+            usuario = (dato['USUARIO'])
+    return usuario
 #Esta función busca el DNI en la base de datos y regresa True si lo encuentra y False si no
 def search(dni):
     for dato in bd:
@@ -17,10 +23,10 @@ def val_dnitype(dni):
     if len(str(dni)) == 8:
         if search(dni)==True:
             print("DNI encontrado")
-            return search
+            return search(dni)
         else:
             print("DNI no encontrado")
-            return search
+            return search(dni)
     else: 
         print("DNI inválido")
         return False
@@ -56,8 +62,7 @@ def reservation_now():
     ava_g = available_gate()
     #Si no hay puerta disponible
     if ava_g == 0:
-        print("No hay puerta disponible")
-        return 0
+        return [0,0]
     else:
         return [ava_g,1]
     
@@ -76,27 +81,20 @@ def time_():
         str_hour =f'{hour_.hour}:00m'
     return str_hour
 
-    return None
+ 
 
 
-def val_gate(day, time):
+def val_gate(day,time):
     for entry in times:
         if entry['day'] == day:
             for time_entry in entry['times']:
                 if time_entry['time'] == time:
                     for gate_entry in time_entry['gates']:
                         if gate_entry['reserva'] == '0':
-                            print(f"La puerta {gate_entry['gate']} está disponible.")
                             return gate_entry
-                        else:
-                            print("No hay puertas disponibles en este momento.")
-                    return 0
-                else:
-                    print("La hora especificada no está disponible para reservas.")
-            return 0
-        else:
-            print("El día especificado no está en la base de datos.")
-    return 0
+                        elif gate_entry['reserva']=='1':
+                            return gate_entry
+      
 
 
 
