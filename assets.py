@@ -6,6 +6,7 @@ in_gate = 0 # Inicialmente la puerta esta cerrada
 def access():
     dni = input('Ingrese DNI: ') #Esto puede cambiarse por un sensor
     reserve = reads.dni_reads(dni)
+    usuario =reads.user(dni)
     if reserve == [0,0] and reads.search(dni)==False :
         print("El dni no esta en la base de datos")
         print("Ingrese un nuevo DNI")
@@ -16,17 +17,18 @@ def access():
             access_val = reads.reservation_now()[0]
             gate = reads.reservation_now()[1]        
             if gate ==0:
-                print("No hay cancha disponible")
+                print(f"Lo lamentamos {usuario}, no hay cancha disponible")
                 print("No se abrira ninguna puerta")
                 return[access_val,gate]
-            print(f"La puerta {gate} está disponible.")
+            print(f"Bienvenido {usuario}, la cancha {gate} está disponible.")
             return[access_val,gate]
         else:
+            print("Solicitó no reservar ahora")
             access()
     else:
         access_val = reserve[0]
         gate = reserve[1]
-        usuario =reads.user(dni)
+
         print("Bienvenido {}. Tu cancha reservada es la {}.".format(usuario,gate))
         return [access_val,gate] #La puerta tiene que abrirse o cerrarse
 
@@ -36,6 +38,7 @@ def save():
 
 
 def send_to_arduino(puerta):
+    print(f'El valor que se enviara al raspberry será: {puerta}')
     try:
         # Configura la conexión serial con el Arduino
         ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)  # Ajusta el puerto serial según sea necesario

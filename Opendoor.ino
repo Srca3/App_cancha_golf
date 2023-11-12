@@ -9,8 +9,8 @@ void setup() {
   pinMode(motorPin2, OUTPUT);
   
   // Detiene ambos motores al inicio
-  digitalWrite(motorPin1, HIGH);
-  digitalWrite(motorPin2, HIGH);
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, LOW);
 }
 
 void loop() {
@@ -35,20 +35,20 @@ void loop() {
 
 void abrirPuerta1() {
   // Lógica para abrir la puerta 1
-  digitalWrite(motorPin1, LOW);
-  delay(2000);  // Ajusta el tiempo según sea necesario
   digitalWrite(motorPin1, HIGH);
+  delay(2000);  // Ajusta el tiempo según sea necesario
+  digitalWrite(motorPin1, LOW);
 }
 
 void abrirPuerta2() {
   // Lógica para abrir la puerta 2
-  digitalWrite(motorPin2, LOW);
-  delay(2000);  // Ajusta el tiempo según sea necesario
   digitalWrite(motorPin2, HIGH);
+  delay(2000);  // Ajusta el tiempo según sea necesario
+  digitalWrite(motorPin2, LOW);
 }
 
 void detenerMotores() {
   // Detiene ambos motores
-  digitalWrite(motorPin1, HIGH);
-  digitalWrite(motorPin2, HIGH);
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, LOW);
 }

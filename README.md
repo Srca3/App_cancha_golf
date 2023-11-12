@@ -13,7 +13,7 @@ Asegúrate de tener instalado Python en tu sistema para ejecutar este código.
     ```bash
     git clone https://github.com/Srca3/App_cancha_golf
     ```
-2. Asegurate de tener instalados los paquetes necesarios
+2. Asegurate de tener instalados los paquetes necesarios.
     ```bash
     pip install datetime serial time pyserial
     ```

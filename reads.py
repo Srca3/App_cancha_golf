@@ -45,7 +45,7 @@ def have_permission(dni):
 
 #Esta función regresa el valor de acceso y la puerta o si no tiene acceso
 def dni_reads(dni):
-    print("Leyendo DNI")
+    print("Leyendo DNI...")
     val_access = val_dnitype(dni) # Puede ser 0 o 1 
     if val_access == True:
         gate = reserved_gate(dni) #Puerta o cancha

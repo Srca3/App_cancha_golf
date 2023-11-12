@@ -33,7 +33,7 @@ times = [
          {'time': '5:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
          {'time': '6:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
          {'time': '7:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
-         {'time': '8:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
+         {'time': '8:00pm', 'gates': [{'gate': 1, 'reserva': '1'}, {'gate': 2, 'reserva': '1'}]},
          {'time': '9:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]}
      ]
     },
@@ -52,7 +52,7 @@ times = [
          {'time': '5:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
          {'time': '6:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
          {'time': '7:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
-         {'time': '8:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]},
+         {'time': '8:00pm', 'gates': [{'gate': 1, 'reserva': '1'}, {'gate': 2, 'reserva': '1'}]},
          {'time': '9:00pm', 'gates': [{'gate': 1, 'reserva': '0'}, {'gate': 2, 'reserva': '0'}]}
      ]
     },
