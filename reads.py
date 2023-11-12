@@ -52,7 +52,6 @@ def dni_reads(dni):
         access = have_permission(dni) # Tiene acceso o no
         return[access, gate]
     else:
-        print("Usted no tiene acceso")
         return[0,0]
     
 def reservation_now():
@@ -94,6 +93,11 @@ def available_gate():
     _time = time_()
     
     return val_gate(_day,_time)
+
+def _now():
+    now = dt.datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print("Fecha y hora actuales=", dt_string)
 
 
 

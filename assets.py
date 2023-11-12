@@ -4,32 +4,32 @@ import time
 in_gate = 0 # Inicialmente la puerta esta cerrada
 
 def access():
+    reads._now()
     dni = input('Ingrese DNI: ') #Esto puede cambiarse por un sensor
     reserve = reads.dni_reads(dni)
-    usuario =reads.user(dni)
     if reserve == [0,0] and reads.search(dni)==False :
         print("El dni no esta en la base de datos")
-        print("Ingrese un nuevo DNI")
-        access()
+        print('Ingrese un nuevo DNI. \n')
+        return access()
     elif reserve ==[0,0] and reads.search(dni)==True:
         _action = input("Ingresa s o n para definir si quieres reservar ahora: ")
         if _action =='s':
-            access_val = reads.reservation_now()[0]
-            gate = reads.reservation_now()[1]        
+            reservation_result=reads.reservation_now()
+            access_val = reservation_result[0]
+            gate = reservation_result[1]        
             if gate ==0:
-                print(f"Lo lamentamos {usuario}, no hay cancha disponible")
-                print("No se abrira ninguna puerta")
+                print(f"Lo lamentamos {reads.user(dni)}, no hay cancha disponible.")
+                print("No se abrira ninguna puerta.")
                 return[access_val,gate]
-            print(f"Bienvenido {usuario}, la cancha {gate} está disponible.")
-            return[access_val,gate]
+            print(f"Bienvenido {reads.user(dni)}, la cancha {gate} está disponible.")
+            return [access_val,gate]
         else:
-            print("Solicitó no reservar ahora")
-            access()
+            print("Solicitó no reservar ahora.\n")
+            return access()
     else:
         access_val = reserve[0]
         gate = reserve[1]
-
-        print("Bienvenido {}. Tu cancha reservada es la {}.".format(usuario,gate))
+        print("Bienvenido {}. Tu cancha reservada es la {}.".format(reads.user(dni),gate))
         return [access_val,gate] #La puerta tiene que abrirse o cerrarse
 
 def save():
@@ -49,11 +49,11 @@ def send_to_arduino(puerta):
 
         # Espera la confirmación del Arduino (opcional)
         response = ser.readline().decode('utf-8').strip()
-        print(f"Arduino dice: {response}")
+        print(f"Arduino dice: {response}.\n")
 
         # Cierra la conexión serial
         ser.close()
 
     except Exception as e:
-        print(f"Error al enviar datos al Arduino: {e}")
+        print(f"Error al enviar datos al Arduino: {e}\n")
 

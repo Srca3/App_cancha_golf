@@ -1,5 +1,14 @@
-# App_cancha_golf 
-# Sistema de Control de Acceso
+# Grupo 6
+## Autores
+Santiago Cruz 
+Carlos Oliva
+Diego Vasquez
+Luis Ibañez
+Lucas Doig
+Fabrizio Piedra
+Zebastian Morocho
+
+# App_cancha_golf
 
 Este es un sistema simple de control de acceso que permite a los usuarios acceder a una cancha de golf o reservar una cancha en función de su DNI y disponibilidad. El sistema incluye funciones para verificar el DNI, buscar en la base de datos, reservar puertas y más.
 
@@ -54,13 +63,4 @@ Verifica la disponibilidad de puertas en función de la fecha y hora actuales.
 
 Si encuentras algún problema o deseas contribuir, ¡sientete libre de abrir un issue o enviar un pull request!
 
-## Autores
-
-Santiago Cruz 
-Carlos Oliva
-Diego Vasquez
-Luis Ibañez
-Lucas Doig
-Fabrizio Piedra
-Zebastian Morocho
 
