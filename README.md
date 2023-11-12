@@ -14,7 +14,7 @@ Asegúrate de tener instalado Python en tu sistema para ejecutar este código.
     git clone https://github.com/Srca3/App_cancha_golf
     ```
 2. Asegurate de tener instalados los paquetes necesarios.
-    ```bash
+    ```python
     pip install datetime serial time pyserial
     ```
 3. Abre la terminal en la ubicación del archivo `main.py`.
