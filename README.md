@@ -1,11 +1,11 @@
 # Grupo 6
 ## Autores
-Santiago Cruz 
-Carlos Oliva
-Diego Vasquez
-Luis Ibañez
-Lucas Doig
-Fabrizio Piedra
+Santiago Cruz\
+Carlos Oliva\
+Diego Vasquez\
+Luis Ibañez\
+Lucas Doig\
+Fabrizio Piedra\
 Zebastian Morocho
 
 # App_cancha_golf
