@@ -97,7 +97,7 @@ def available_gate():
 def _now():
     now = dt.datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print("Fecha y hora actuales=", dt_string)
+    print("\nFecha y hora actuales=", dt_string)
 
 
 

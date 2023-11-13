@@ -15,6 +15,16 @@ datos = [
     'USUARIO':'Santiago Cruz', 
     'Reserva': 1, 
     'Puerta' : 2,
+},
+{   'DNI': '71234567', 
+    'USUARIO': 'Usuario1', 
+    'Reserva': 0, 
+    'Puerta': 0
+},
+{   'DNI': '79987654', 
+    'USUARIO': 'Usuario2',
+    'Reserva': 0, 
+    'Puerta': 0
 }
 ]
 

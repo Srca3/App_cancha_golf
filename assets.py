@@ -9,7 +9,7 @@ def access():
     reserve = reads.dni_reads(dni)
     if reserve == [0,0] and reads.search(dni)==False :
         print("El dni no esta en la base de datos")
-        print('Ingrese un nuevo DNI. \n')
+        print('Ingrese un nuevo DNI.')
         return access()
     elif reserve ==[0,0] and reads.search(dni)==True:
         _action = input("Ingresa s o n para definir si quieres reservar ahora: ")
@@ -24,7 +24,7 @@ def access():
             print(f"Bienvenido {reads.user(dni)}, la cancha {gate} está disponible.")
             return [access_val,gate]
         else:
-            print("Solicitó no reservar ahora.\n")
+            print("Solicitó no reservar ahora.")
             return access()
     else:
         access_val = reserve[0]
@@ -49,11 +49,11 @@ def send_to_arduino(puerta):
 
         # Espera la confirmación del Arduino (opcional)
         response = ser.readline().decode('utf-8').strip()
-        print(f"Arduino dice: {response}.\n")
+        print(f"Arduino dice: {response}.")
 
         # Cierra la conexión serial
         ser.close()
 
     except Exception as e:
-        print(f"Error al enviar datos al Arduino: {e}\n")
+        print(f"Error al enviar datos al Arduino: {e}")
 
