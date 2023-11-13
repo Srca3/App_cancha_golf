@@ -2,3 +2,8 @@ in_gate booleano
 open_door booleano
 n_gates 2 puertas
 reserve booleano
+
+
+
+
+
